@@ -1,0 +1,117 @@
+<Page
+    class="page"
+    navigatingTo="onNavigatingTo"
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar class="action-bar">
+        <Label class="action-bar-title" text="NITISH DIALER"></Label>
+    </ActionBar>
+    <StackLayout>
+        <ListView height="{{ (query!='') ? '30%' : '37%' }}" backgroundColor="white" items="{{ items }}" itemTap="onItemTap" class="list-group">
+            <ListView.itemTemplate>
+                <StackLayout orientation="horizontal" class="list-group-item">
+                    <StackLayout orientation="horizontal" >
+                    <Label text="{{ name }}" marginRight="10" textWrap="true" />
+                    <Label text="{{ mobile }}" color="gray" textWrap="true" />
+                </StackLayout>
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+        <GridLayout visibility="{{ (query!='') ? 'visible' : 'collapsed' }}" height="7%">
+            <Label backgroundColor="gray" text="{{ query }}" class="number-style" />
+        </GridLayout>
+        <GridLayout height="63%" width="100%" backgroundColor="black" rows="*,*,*,*">
+            <StackLayout row="0" orientation="horizontal">
+                <StackLayout sup="1" width="33.3%" verticalAlignment="middle" horizontalAlignment="center">
+                    <StackLayout class="number-layout" touch="animeButton" ontap="buttonTapped" backgroundColor="gray">
+                        <Label text="1" class="number-style" />
+                        <Label text="" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout sup="2" width="33.3%" verticalAlignment="middle" horizontalAlignment="center">
+                    <StackLayout class="number-layout" touch="animeButton" ontap="buttonTapped" backgroundColor="gray">
+                        <Label text="2" class="number-style" />
+                        <Label fontSize="15" textAlignment="center" text="A B C" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout sup="3" width="33.3%" verticalAlignment="middle" horizontalAlignment="center">
+                    <StackLayout class="number-layout" touch="animeButton" ontap="buttonTapped" backgroundColor="gray">
+                        <Label text="3" class="number-style" />
+                        <Label fontSize="15" textAlignment="center" text="D E F" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout row="1" orientation="horizontal">
+                <StackLayout sup="4" width="33.3%" verticalAlignment="middle" horizontalAlignment="center">
+                    <StackLayout class="number-layout" touch="animeButton" ontap="buttonTapped" backgroundColor="gray">
+                        <Label text="4" class="number-style" />
+                        <Label fontSize="15" textAlignment="center" text="G H I" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout sup="5" width="33.3%" verticalAlignment="middle" horizontalAlignment="center">
+                    <StackLayout class="number-layout" touch="animeButton" ontap="buttonTapped" backgroundColor="gray">
+                        <Label text="5" class="number-style" />
+                        <Label fontSize="15" textAlignment="center" text="J K L" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout sup="6" width="33.3%" verticalAlignment="middle" horizontalAlignment="center">
+                    <StackLayout class="number-layout" touch="animeButton" ontap="buttonTapped" backgroundColor="gray">
+                        <Label text="6" class="number-style" />
+                        <Label fontSize="15" textAlignment="center" text="M N O" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout row="2" orientation="horizontal">
+                <StackLayout sup="7" width="33.3%" verticalAlignment="middle" horizontalAlignment="center">
+                    <StackLayout class="number-layout" touch="animeButton" ontap="buttonTapped" backgroundColor="gray">
+                        <Label text="7" class="number-style" />
+                        <Label fontSize="15" textAlignment="center" text="P Q R S" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout sup="8" width="33.3%" verticalAlignment="middle" horizontalAlignment="center">
+                    <StackLayout class="number-layout" touch="animeButton" ontap="buttonTapped" backgroundColor="gray">
+                        <Label text="8" class="number-style" />
+                        <Label fontSize="15" textAlignment="center" text="T U V" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout sup="9" width="33.3%" verticalAlignment="middle" horizontalAlignment="center">
+                    <StackLayout class="number-layout" touch="animeButton" ontap="buttonTapped" backgroundColor="gray">
+                        <Label text="9" class="number-style" />
+                        <Label fontSize="15" textAlignment="center" text="W X Y Z" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout row="3" orientation="horizontal">
+                <StackLayout sup="0" width="33.3%" verticalAlignment="middle" horizontalAlignment="center">
+                    <!-- <StackLayout class="number-layout" touch="animeButton" ontap="buttonTapped" backgroundColor="gray">
+                        <Label text="0" class="number-style" />
+                        <Label text="" />
+                    </StackLayout> -->
+                </StackLayout>
+                <StackLayout sup="0" width="33.3%" verticalAlignment="middle" horizontalAlignment="center">
+                    <StackLayout class="number-layout" touch="animeButton" ontap="buttonTapped" backgroundColor="gray">
+                        <Label text="0" class="number-style" />
+                        <Label text="" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout sup="0" width="33.3%" verticalAlignment="middle" horizontalAlignment="center">
+                    <StackLayout class="number-layout" touch="animeButton" ontap="clear" backgroundColor="gray">
+                        <Label text="X" fontSize="35" class="number-style" />
+                        <Label text="" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </GridLayout>
+        <!-- <GridLayout backgroundColor="black" rows="1*,1*,1*" colums="1*,1*,1*">
+        <StackLayout backgroundColor="yellow" margin="5" row="0" col="0" ></StackLayout>
+        <StackLayout margin="5" row="0" col="1" ></StackLayout>
+        <StackLayout backgroundColor="violet" margin="5" row="0" col="2" ></StackLayout>
+        <StackLayout backgroundColor="red" margin="5" row="1" col="0" ></StackLayout>
+        <StackLayout backgroundColor="red" margin="5" row="1" col="1" ></StackLayout>
+        <StackLayout backgroundColor="red" margin="5" row="1" col="2" ></StackLayout>
+        <StackLayout backgroundColor="red" margin="5" row="2" col="0" ></StackLayout>
+        <StackLayout backgroundColor="red" margin="5" row="2" col="1" ></StackLayout>
+        <StackLayout backgroundColor="red" margin="5" row="2" col="2" ></StackLayout>
+    </GridLayout> -->
+    </StackLayout>
+</Page>
