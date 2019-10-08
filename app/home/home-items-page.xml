@@ -18,9 +18,12 @@
             </ListView.itemTemplate>
         </ListView>
         <GridLayout visibility="{{ (query!='') ? 'visible' : 'collapsed' }}" height="7%">
-            <Label backgroundColor="gray" text="{{ query }}" class="number-style" />
+            <Label backgroundColor="black" color="white" text="{{ query }}" class="number-style" />
         </GridLayout>
-        <GridLayout height="63%" width="100%" backgroundColor="black" rows="*,*,*,*">
+        <StackLayout padding="5" paddingTop="0" backgroundColor="black" >
+            <StackLayout class="hr-light" padding="5" marginRight="10" marginLeft="10" ></StackLayout>
+        </StackLayout>
+        <GridLayout paddingLeft="30%" paddingRight="30%" height="63%" width="100%" backgroundColor="black" rows="*,*,*,*">
             <StackLayout row="0" orientation="horizontal">
                 <StackLayout sup="1" width="33.3%" verticalAlignment="middle" horizontalAlignment="center">
                     <StackLayout class="number-layout" touch="animeButton" ontap="buttonTapped" backgroundColor="gray">
@@ -83,10 +86,10 @@
             </StackLayout>
             <StackLayout row="3" orientation="horizontal">
                 <StackLayout sup="0" width="33.3%" verticalAlignment="middle" horizontalAlignment="center">
-                    <!-- <StackLayout class="number-layout" touch="animeButton" ontap="buttonTapped" backgroundColor="gray">
-                        <Label text="0" class="number-style" />
+                    <StackLayout class="number-layout"  touch="animeButton" ontap="callExistingNumber" backgroundColor="green" color="white">
+                        <Label text="&#xf095;" class="number-style fa" />
                         <Label text="" />
-                    </StackLayout> -->
+                    </StackLayout>
                 </StackLayout>
                 <StackLayout sup="0" width="33.3%" verticalAlignment="middle" horizontalAlignment="center">
                     <StackLayout class="number-layout" touch="animeButton" ontap="buttonTapped" backgroundColor="gray">

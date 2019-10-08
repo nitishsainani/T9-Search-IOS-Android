@@ -157,6 +157,12 @@ function clear() {
     return;
 }
 
+function callExistingNumber() {
+    phone.dial(homeViewModel.query + "", false);
+    return;
+}
+
+exports.callExistingNumber = callExistingNumber;
 exports.clear = clear;
 exports.animeButton = animeButton;
 exports.buttonTapped = buttonTapped;
